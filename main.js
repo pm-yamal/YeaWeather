@@ -13,13 +13,15 @@ async function checkWeather(city) {
     }
     else {
         const data = await responce.json();
+        console.log(data);
         document.querySelector('.weather').style.display = 'block';
         document.querySelector('.error').style.display = 'none';
 
         document.querySelector('.city').innerHTML = data.name;
         document.querySelector('.temperature').innerHTML = Math.round(data.main.temp) + '°C';
         document.querySelector('.humidity').innerHTML = data.main.humidity + '%';
-        document.querySelector('.wind').innerHTML = data.wind.speed + ' km/h';
+        document.querySelector('.wind').innerHTML = data.wind.speed + ' км/ч';
+        document.querySelector('.barometer').innerHTML = data.main.pressure + ' мм.рт.ст.';
         
         if (data.weather[0].main === 'Clouds') {
             weatherIcon.src = './img/clouds.png'

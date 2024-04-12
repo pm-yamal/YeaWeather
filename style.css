@@ -80,18 +80,22 @@ body {
 }
 
 .column {
-    display: flex;
+    /* display: flex; */
     align-items: center;
-    text-align: left;
+    text-align: center;
 }
 
 .column img {
-    width: 40px;
-    margin-right: 10px;
+    width: 50px;
+    margin-bottom: 6px;
 }
 
-.humidity, .wind {
-    font-size: 28px;
+.column p {
+    font-size: 18px;
+}
+
+.humidity, .wind, .barometer {
+    font-size: 20px;
     margin-top: -6px;
 }
 
